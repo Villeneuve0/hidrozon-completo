@@ -495,7 +495,7 @@ Pare de achar feito toda vez ao olhar para o espero e seja desejada novamente pe
 			<div class="elementor-widget-wrap elementor-element-populated">
 								<div class="elementor-element elementor-element-c1dffa3 elementor-widget elementor-widget-image" data-id="c1dffa3" data-element_type="widget" data-widget_type="image.default">
 				<div class="elementor-widget-container">
-																<a href="https://ev.braip.com/campanhas/cpa/camv17dmk">
+																<a class="gpc_modal gpc_campo gpc-link link_externo link_popup" href="https://ev.braip.com/campanhas/cpa/camv17dmk">
 							<img decoding="async" loading="lazy" width="541" height="1024" src="images/12-541x1024.png" class="attachment-large size-large wp-image-1281" alt srcset="images/12-541x1024.png 541w, images/12-158x300.png 158w, images/12.png 664w" sizes="(max-width: 541px) 100vw, 541px">								</a>
 															</div>
 				</div>
@@ -505,7 +505,7 @@ Pare de achar feito toda vez ao olhar para o espero e seja desejada novamente pe
 			<div class="elementor-widget-wrap elementor-element-populated">
 								<div class="elementor-element elementor-element-ee6b551 elementor-widget elementor-widget-image" data-id="ee6b551" data-element_type="widget" data-widget_type="image.default">
 				<div class="elementor-widget-container">
-																<a href="https://ev.braip.com/campanhas/cpa/camddr4m6">
+																<a class="gpc_modal gpc_campo gpc-link link_externo link_popup" href="https://ev.braip.com/campanhas/cpa/camddr4m6">
 							<img decoding="async" loading="lazy" width="541" height="1024" src="images/5--541x1024.png" class="attachment-large size-large wp-image-1282" alt srcset="images/5--541x1024.png 541w, images/5--158x300.png 158w, images/5-.png 664w" sizes="(max-width: 541px) 100vw, 541px">								</a>
 															</div>
 				</div>
@@ -515,7 +515,7 @@ Pare de achar feito toda vez ao olhar para o espero e seja desejada novamente pe
 			<div class="elementor-widget-wrap elementor-element-populated">
 								<div class="elementor-element elementor-element-fe74f25 elementor-widget elementor-widget-image" data-id="fe74f25" data-element_type="widget" data-widget_type="image.default">
 				<div class="elementor-widget-container">
-																<a href="https://ev.braip.com/campanhas/cpa/camzlz509">
+																<a class="gpc_modal gpc_campo gpc-link link_externo link_popup" href="https://ev.braip.com/campanhas/cpa/camzlz509">
 							<img decoding="async" loading="lazy" width="541" height="1024" src="images/3-7-541x1024.png" class="attachment-large size-large wp-image-1283" alt srcset="images/3-7-541x1024.png 541w, images/3-7-158x300.png 158w, images/3-7.png 664w" sizes="(max-width: 541px) 100vw, 541px">								</a>
 															</div>
 				</div>
@@ -525,7 +525,7 @@ Pare de achar feito toda vez ao olhar para o espero e seja desejada novamente pe
 			<div class="elementor-widget-wrap elementor-element-populated">
 								<div class="elementor-element elementor-element-300d1e6 elementor-widget elementor-widget-image" data-id="300d1e6" data-element_type="widget" data-widget_type="image.default">
 				<div class="elementor-widget-container">
-																<a href="https://ev.braip.com/campanhas/cpa/cam2l84mp">
+																<a class="gpc_modal gpc_campo gpc-link link_externo link_popup" href="https://ev.braip.com/campanhas/cpa/cam2l84mp">
 							<img decoding="async" loading="lazy" width="541" height="1024" src="images/1--541x1024.png" class="attachment-large size-large wp-image-1284" alt srcset="images/1--541x1024.png 541w, images/1--158x300.png 158w, images/1-.png 664w" sizes="(max-width: 541px) 100vw, 541px">								</a>
 															</div>
 				</div>
@@ -898,5 +898,8 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
     f.parentNode.insertBefore(j,f);
 })(window,document,'script',Date.now());
 </script>
-	
+<!-- INICIO DO SCRIPT -->
+    <script> function URLToArray(url) { var request = {}; if (url.indexOf('?') !== -1) { var pairs = url.substring(url.indexOf('?') + 1).split('&'); for (var i = 0; i < pairs.length; i++) { if (!pairs[i]) continue; var pair = pairs[i].split('='); request[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1]); } } return request; } function adicionarUTM(modal = false) { const formularios = Array.from(document.querySelectorAll((modal ? '.gpc_modal ' : '') + 'form')); const utm = URLToArray(window.location.href); let linkUsar = ''; if (Object.entries(utm).length) { for (var [key, value] of Object.entries(utm)) { linkUsar += key + '=' + value + '&'; } if (linkUsar.length) { linkUsar = linkUsar.slice(0, -1); } } formularios.forEach(formulario => { const campos = Array.from(formulario.querySelectorAll('.gpc_campo')); campos.forEach(campo => { if (campo.value == '{utm_source}') { campo.value = utm['utm_source']  ''; } if (campo.value == '{utm_medium}') { campo.value = utm['utm_medium']  ''; } if (campo.value == '{utm_campaign}') { campo.value = utm['utm_campaign']  ''; } if (campo.value == '{utm_term}') { campo.value = utm['utm_term']  ''; } if (campo.value == '{utm_content}') { campo.value = utm['utm_content'] || ''; } }); const botao = formulario.querySelector('.gpc_botao'); if (botao && botao.getAttribute('gpc-link')) { const linkBotao = botao.getAttribute('gpc-link'); const concatenar = linkBotao.includes('?') ? '&' : '?'; botao.setAttribute('gpc-link', linkBotao + concatenar + linkUsar); } }); if (linkUsar !== '') { const botoes = Array.from(document.querySelectorAll((modal ? '.gpc_modal ' : '') + '.link_externo')); botoes.forEach(link => { const href = link.getAttribute('href'); const concatenar = href.includes('?') ? '&' : '?'; link.setAttribute('href', href + concatenar + linkUsar); }); } } adicionarUTM(); $('body').on('click', '.link_popup', function () { setTimeout(() => { adicionarUTM(true); }, 200); });
+    </script>
+    <!-- FIM DO SCRIPT -->	
 </body></html>
